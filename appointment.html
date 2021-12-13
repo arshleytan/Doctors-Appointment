@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>D'Appointment | Appointment</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="assets/css/appointment-page.css" rel="stylesheet">
+ </head>
+ <body id="body-pd">
+  <header class="header" id="header">
+      <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+      <h4 class="nav-title" id = "head-title">Set New Appoinment</h4>
+      <div class="header_img"> <img src="" alt=""> </div>
+  </header>
+  <div class="l-navbar" id="nav-bar">
+      <nav class="nav">
+          <div> <a href="#" class="nav_logo"> 
+              <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">D'Appointment</span> </a>
+              <div class="nav_list"> 
+                <a href="patient-page.html" class="nav_link"> <i class='bx bx-calendar-check nav_icon'></i> <span class="nav_name">Appointments</span> </a> 
+                <a href="appointment.html" class="nav_link active"> <i class='bx bx-calendar-edit nav_icon'></i> <span class="nav_name">New Appointment</span> </a> 
+                <a href="doctors.html" class="nav_link"> <i class="fas fa-stethoscope"></i> <span class="nav_name">Doctors</span> </a>
+                <a href="profile-page.html" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Profile</span> </a> 
+          </div> <a href="login-page.html" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">Log Out</span> </a>
+      </nav>
+  </div>
+  <!--Container Main start-->
+  <div class="content"><br><br>
+        <div class="alert alert-warning time" id ="slot-message" role="alert">
+          <i class='bx bx-error-circle error-sign'></i> Please be advised that your chosen time slot is reserved for 30 minutes.
+        </div>
+      <div class = "calendar">
+        <form id="regForm">
+          <div class="tab">
+        <h5 class="title-picker">Date</h5>
+          <div class ="d-flex justify-content-center">
+            <input class = "form-control" type="date">
+        </div>
+        <br>
+        <h5 class="title-picker">Time</h5><br>
+        <div class="time-selection">
+          <div class="row">
+            <div class="col">
+              <div class="radio-selection">
+                  <input type="radio" id="first-time" name="prefer-time">
+                  <label for="first-time">8:00 - 9:00 AM</label><br>
+                </div>
+            </div>
+            <div class="col">
+              <div class="radio-selection-double">
+                  <input type="radio" id="second-time" name="prefer-time">
+                  <label for="first-time">10:00 - 11:00 AM</label><br>
+                </div>  
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="radio-selection">
+                  <input type="radio" id="third-time" name="prefer-time">
+                  <label for="first-time">1:00 - 2:00 PM</label><br>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="radio-selection">
+                  <input type="radio" id="fourth-time" name="prefer-time">
+                  <label for="first-time">2:00 - 3:00 PM</label><br>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="radio-selection">
+                  <input type="radio" id="fifth-time" name="prefer-time">
+                  <label for="first-time">3:00 - 4:30 PM</label><br>
+              </div>
+            </div>
+            <div class="col">
+              <div class="radio-selection">
+                  <input type="radio" id="fifth-time" name="prefer-time">
+                  <label for="first-time">3:00 - 4:30 PM</label><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <br>
+        <div class ="tab">
+         <div class ="d-flex justify-content-center doctors">
+          <div class = "row">
+            <div class ="col doc-card">
+              <div class="card" id = "card">
+                <img class="card-img-top" src="assets/img/doctors/doctors-1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Doctor Name</h5>
+                  <p class="card-text">Specialist</p>
+                  <button type="button" id="choose-btn" class="btn btn-primary">Choose</button>
+                </div>
+              </div>
+           </div>
+            <div class="col doc-card">
+              <div class="card" id = "card">
+                <img class="card-img-top" src="assets/img/doctors/doctors-2.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Doctor Name</h5>
+                  <p class="card-text">Specialist</p>
+                  <button type="button" id="choose-btn" class="btn btn-primary">Choose</button>
+                </div>
+              </div>
+            </div>
+            <div class="col doc-card">
+              <div class="card" id = "card">
+                <img class="card-img-top" src="assets/img/doctors/doctors-3.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Doctor Name</h5>
+                  <p class="card-text">Specialist</p>
+                  <button type="button" id="choose-btn" class="btn btn-primary">Choose</button>
+                </div>
+              </div>
+            </div>
+            <div class="col doc-card">
+              <div class="card" id = "card">
+                <img class="card-img-top" src="assets/img/doctors/doctors-4.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Doctor Name</h5>
+                  <p class="card-text">Specialist</p>
+                  <button type="button" id="choose-btn" class="btn btn-primary">Choose</button>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+        </div>
+        <div class = "tab" id ="second-tab">
+          <h5 class="title-picker">Select payment method:</h5>
+          <br><br>
+          <div class ="d-flex justify-content-center">
+            <div class ="row">
+              <div class ="col">
+          <button type="button" value = "Gcash" id="gcash" name = "pay-method" onclick="fnChangeBorder('gcash')" class="btn btn-outline-primary gcash"><img src = "assets/img/appointment-images/gcash.png"></button>
+         </div>
+          <div class = "col">
+          <button type="button" value = "OTC"  id="otc" name = "pay-method" onclick="fnChangeBorder('otc')"  class="btn btn-outline-primary over"><b>Over-the-counter</b></button>
+          </div>
+         </div>
+          </div>
+          <br><br>
+          <div class = "gcash-form" id ="gcashnumber">
+          <h5>Send GCash payment to:<br>099-226-8851</h5><br><br>
+          <div class="alert alert-warning gcash-alert" role="alert">
+            <p><i class='bx bx-error-circle error-sign'></i> Click "Confirm" after sending the payment.</p>
+          </div>
+          </div>
+        </div>
+          <div class = "tab">
+            <div class="card">
+              <div class="card-body">
+                <p>Patient name</p>
+                <p>Appointment Schedule</p>
+                <p>Payment method</p>
+                <p>Amount</p>
+              </div>
+            </div>
+          </div>
+          <div class ="prev-next-button">
+            <br>
+            <button type="button" class="btn btn-secondary" id="prevBtn" onclick="nextPrev(-1)">Back</button>
+            <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)">Proceed to Payment</button>
+          </div>
+        <!-- Circles which indicates the steps of the form: -->
+        <div class="circles">
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/side-bar-menu.js"></script>
+  <script src="assets/js/multiple-forms.js"></script>
+  </body>
+</html>
+      
